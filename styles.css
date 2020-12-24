@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: normal; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: minmax(120px, auto) 50px 50px 100px 100px 100px 100px;
+}
+
+.wrapper > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid grey;
+    outline: none;
+    background-color: white;
+    color: rgba(0, 0, 0, .90);
+}
+
+.wrapper > button:hover {
+    background-color: rgb(109, 174, 129);
+    color: white;
+}
+
+.output-field {
+    grid-column: 1 / -1;
+    background-color: rgba(245, 222, 179);
+    border: 1px solid grey;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-number {
+    font-size: 1.5rem;
+    color: orangered;
+}
+
+.current-number {
+    font-size: 2.5rem;
+    color: black;
+}
+
+[data-operation-change] {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
